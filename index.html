@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventify - Event Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo">Eventify<span>.</span></h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+
+            <a href="#events" class="nav-btn">Explore Events</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="tag">DISCOVER • CONNECT • EXPERIENCE</span>
+
+            <h1>Make Every Moment<br>
+                <span>Memorable.</span>
+            </h1>
+
+            <p>
+                Discover exciting events, connect with people
+                and create unforgettable experiences.
+            </p>
+
+            <a href="#events" class="primary-btn">
+                Explore Events →
+            </a>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section" id="events">
+
+        <div class="section-heading">
+            <span>WHAT'S HAPPENING</span>
+            <h2>Upcoming Events</h2>
+            <p>Find your next unforgettable experience.</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="filters">
+            <input type="text" id="searchInput"
+                   placeholder="Search events...">
+
+            <select id="categoryFilter">
+                <option value="All">All Categories</option>
+                <option value="Technology">Technology</option>
+                <option value="Music">Music</option>
+                <option value="Education">Education</option>
+                <option value="Business">Business</option>
+            </select>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="event-container" id="eventContainer"></div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>Why Choose Eventify?</h2>
+        <p>
+            Eventify helps you discover, explore and register
+            for exciting events in one place. Join us and
+            make every experience special.
+        </p>
+    </section>
+
+    <!-- Event Details Modal -->
+    <div class="modal" id="eventModal">
+        <div class="modal-content">
+            <button class="close" id="closeModal">&times;</button>
+            <div id="eventDetails"></div>
+            <button class="primary-btn" id="registerBtn">
+                Register Now
+            </button>
+        </div>
+    </div>
+
+    <!-- Registration Section -->
+    <section class="registration" id="registration">
+        <div class="form-container">
+
+            <h2>Event Registration</h2>
+            <p>Register now and reserve your spot!</p>
+
+            <form id="registrationForm">
+
+                <label>Full Name</label>
+                <input type="text" id="name"
+                       placeholder="Enter your name" required>
+
+                <label>Email Address</label>
+                <input type="email" id="email"
+                       placeholder="Enter your email" required>
+
+                <label>Phone Number</label>
+                <input type="tel" id="phone"
+                       placeholder="Enter 10-digit phone number"
+                       required>
+
+                <label>Select Event</label>
+                <select id="selectedEvent" required>
+                    <option value="">Choose an event</option>
+                </select>
+
+                <button type="submit" class="submit-btn">
+                    Submit Registration
+                </button>
+
+            </form>
+
+            <p id="message"></p>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <h2>Eventify.</h2>
+        <p>Discover. Connect. Celebrate.</p>
+        <p>© 2026 Eventify. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
